@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17D491112B0B76140087A9D4 /* DiscountCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D491102B0B76140087A9D4 /* DiscountCodeView.swift */; };
+		17D491132B0B9B150087A9D4 /* ModalExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D491122B0B9B150087A9D4 /* ModalExampleView.swift */; };
 		17F65E1D2B04BE6900E2FDDA /* TrainlineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F65E1C2B04BE6900E2FDDA /* TrainlineApp.swift */; };
 		17F65E1F2B04BE6900E2FDDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F65E1E2B04BE6900E2FDDA /* ContentView.swift */; };
 		17F65E212B04BE6900E2FDDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F65E202B04BE6900E2FDDA /* Assets.xcassets */; };
 		17F65E242B04BE6900E2FDDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F65E232B04BE6900E2FDDA /* Preview Assets.xcassets */; };
+		17F65E2B2B04C1B300E2FDDA /* ResearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F65E2A2B04C1B300E2FDDA /* ResearchView.swift */; };
+		17F65E2D2B04E49100E2FDDA /* AddPassengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F65E2C2B04E49100E2FDDA /* AddPassengerView.swift */; };
+		17F65E302B0759F200E2FDDA /* ListTrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F65E2F2B0759F100E2FDDA /* ListTrainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17D491102B0B76140087A9D4 /* DiscountCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCodeView.swift; sourceTree = "<group>"; };
+		17D491122B0B9B150087A9D4 /* ModalExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalExampleView.swift; sourceTree = "<group>"; };
 		17F65E192B04BE6900E2FDDA /* Trainline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F65E1C2B04BE6900E2FDDA /* TrainlineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainlineApp.swift; sourceTree = "<group>"; };
 		17F65E1E2B04BE6900E2FDDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17F65E202B04BE6900E2FDDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17F65E232B04BE6900E2FDDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17F65E2A2B04C1B300E2FDDA /* ResearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchView.swift; sourceTree = "<group>"; };
+		17F65E2C2B04E49100E2FDDA /* AddPassengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPassengerView.swift; sourceTree = "<group>"; };
+		17F65E2F2B0759F100E2FDDA /* ListTrainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTrainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				17F65E1C2B04BE6900E2FDDA /* TrainlineApp.swift */,
-				17F65E1E2B04BE6900E2FDDA /* ContentView.swift */,
+				17F65E2E2B06181D00E2FDDA /* Views */,
 				17F65E202B04BE6900E2FDDA /* Assets.xcassets */,
 				17F65E222B04BE6900E2FDDA /* Preview Content */,
 			);
@@ -65,6 +75,19 @@
 				17F65E232B04BE6900E2FDDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17F65E2E2B06181D00E2FDDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17F65E1E2B04BE6900E2FDDA /* ContentView.swift */,
+				17F65E2A2B04C1B300E2FDDA /* ResearchView.swift */,
+				17F65E2F2B0759F100E2FDDA /* ListTrainView.swift */,
+				17F65E2C2B04E49100E2FDDA /* AddPassengerView.swift */,
+				17D491102B0B76140087A9D4 /* DiscountCodeView.swift */,
+				17D491122B0B9B150087A9D4 /* ModalExampleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D491132B0B9B150087A9D4 /* ModalExampleView.swift in Sources */,
+				17D491112B0B76140087A9D4 /* DiscountCodeView.swift in Sources */,
 				17F65E1F2B04BE6900E2FDDA /* ContentView.swift in Sources */,
+				17F65E2D2B04E49100E2FDDA /* AddPassengerView.swift in Sources */,
+				17F65E302B0759F200E2FDDA /* ListTrainView.swift in Sources */,
 				17F65E1D2B04BE6900E2FDDA /* TrainlineApp.swift in Sources */,
+				17F65E2B2B04C1B300E2FDDA /* ResearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
