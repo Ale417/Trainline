@@ -11,10 +11,13 @@ struct Train: Identifiable {
     var id: UUID = UUID()
     var Departure: String
     var DepartureCity: String
+    var TimeDeparture: String
     var Arrival: String
     var ArrivalCity: String
+    var TimeArrival: String
     var Country: String
     var Prices: Int
+    var Durata: String
 }
 
 

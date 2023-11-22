@@ -131,7 +131,7 @@ struct MainView: View {
                             .padding()
                         })
                         
-                        NavigationLink(destination: ListTrainView()) {
+                        NavigationLink(destination: ListTrainExample()) {
                             Text("Find times and prices")
                                 .font(.title2)
                                 .fontWeight(.bold)
@@ -168,7 +168,7 @@ struct StationModalView: View {
     var body: some View {
         VStack{
             HStack(spacing:250){
-                Button("Cancel"){
+                Button("Save"){
                     modelContext.insert(TrainData(Departure: partenza, Arrival: arrivo))
                     self.isModalPresented.toggle()
                     isSaved = true

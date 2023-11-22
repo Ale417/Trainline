@@ -34,10 +34,10 @@ struct ListTrainView: View {
                     VStack(alignment:.leading){
                         HStack
                         {
-                            Text(CorseTreni[0].Departure)
-                                .bold()
-                            Image(systemName: "arrow.forward")
-                            Text(CorseTreni[0].Arrival)
+//                            Text(CorseTreni[0].Departure)
+//                                .bold()
+//                            Image(systemName: "arrow.forward")
+//                            Text(CorseTreni[0].Arrival)
                         }
                         .padding(.leading)
                         .foregroundColor(.white)
@@ -80,7 +80,7 @@ struct ListTrainView: View {
                                         .font(.title2)
                                         .bold()
                                 }
-                                Text("€104.69")
+                                Text("€10.69")
                                     .font(.title3)
                                     .bold()
                             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172EF5012B0EAC840023ED99 /* ListTrainExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172EF5002B0EAC840023ED99 /* ListTrainExample.swift */; };
 		177D235C2B0E098600542BF9 /* Trains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D235B2B0E098600542BF9 /* Trains.swift */; };
 		177D235F2B0E0BBC00542BF9 /* TrainsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D235E2B0E0BBC00542BF9 /* TrainsViewModel.swift */; };
 		177D23622B0E60E300542BF9 /* TrainStorahe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D23612B0E60E300542BF9 /* TrainStorahe.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172EF5002B0EAC840023ED99 /* ListTrainExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTrainExample.swift; sourceTree = "<group>"; };
 		177D235B2B0E098600542BF9 /* Trains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trains.swift; sourceTree = "<group>"; };
 		177D235E2B0E0BBC00542BF9 /* TrainsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainsViewModel.swift; sourceTree = "<group>"; };
 		177D23612B0E60E300542BF9 /* TrainStorahe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainStorahe.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				17F65E2C2B04E49100E2FDDA /* AddPassengerView.swift */,
 				17D491102B0B76140087A9D4 /* DiscountCodeView.swift */,
 				17D491122B0B9B150087A9D4 /* ModalExampleView.swift */,
+				172EF5002B0EAC840023ED99 /* ListTrainExample.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				177D235C2B0E098600542BF9 /* Trains.swift in Sources */,
 				17D491132B0B9B150087A9D4 /* ModalExampleView.swift in Sources */,
 				17D491112B0B76140087A9D4 /* DiscountCodeView.swift in Sources */,
+				172EF5012B0EAC840023ED99 /* ListTrainExample.swift in Sources */,
 				17F65E1F2B04BE6900E2FDDA /* ContentView.swift in Sources */,
 				177D235F2B0E0BBC00542BF9 /* TrainsViewModel.swift in Sources */,
 				17F65E2D2B04E49100E2FDDA /* AddPassengerView.swift in Sources */,
