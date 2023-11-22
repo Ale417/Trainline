@@ -12,8 +12,9 @@ import SwiftData
 struct TrainlineApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: TrainData.self)
+            MainView(partenza: .constant("Departure Station"), arrivo: .constant("Arrival Station"))
+        }.modelContainer(for: [TrainData.self, Info.self])
+      
     }
+
 }

@@ -6,19 +6,6 @@
 //
 
 import Foundation
-import SwiftData
-
-
-
-@Model class TrainData{
-    var Departure: String
-    var Arrival: String
-    
-    init(Departure: String, Arrival: String) {
-        self.Departure = Departure
-        self.Arrival = Arrival
-    }
-}
 
 struct Train: Identifiable {
     var id: UUID = UUID()

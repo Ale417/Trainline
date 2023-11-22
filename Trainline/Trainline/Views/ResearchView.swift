@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CustomColor {
     static let DelftBlue = Color("Delft Blue")
@@ -20,6 +21,12 @@ struct MainView: View {
     @Binding var arrivo:String
     @State private var Date_Departure = Date()
     @State private var Date_Arrival = Date()
+    @State var isSaved:Bool = false
+    @State var cont:Int = 1
+    @Environment(\.modelContext) var modelContext
+    
+    
+    @Query var CorseTreni: [TrainData]
     var body: some View {
         NavigationStack{
             ZStack{
@@ -44,12 +51,12 @@ struct MainView: View {
                                 HStack(spacing:10.0){
                                     Text("from:")
                                         .foregroundColor(CustomColor.Teal)
-                                    Button("\(partenza)") {
+                                    Button(isSaved==false ? "\(partenza)": "\(CorseTreni[0].Departure)") {
                                         isModalPresented.toggle()
                                     }
                                     .foregroundColor(.gray)
                                         .fullScreenCover(isPresented: $isModalPresented) {
-                                            ModalView(isModalPresented:self.$isModalPresented)
+                                            StationModalView(isModalPresented:self.$isModalPresented, isSaved: $isSaved)
                                         }
                                 }
                                 .padding(.leading, -180)
@@ -63,12 +70,12 @@ struct MainView: View {
                                 HStack(spacing:10.0){
                                     Text("to:")
                                         .foregroundColor(CustomColor.Teal)
-                                    Button("\(arrivo)"){
+                                    Button(isSaved==false ? "\(arrivo)": "\(CorseTreni[0].Arrival)"){
                                         isModalPresented.toggle()
                                     }
                                     .foregroundColor(.gray)
                                      .fullScreenCover(isPresented: $isModalPresented) {
-                                            ModalView(isModalPresented:self.$isModalPresented)
+                                         StationModalView(isModalPresented:self.$isModalPresented, isSaved: $isSaved)
                                         }
                                      
                                 }
@@ -115,7 +122,8 @@ struct MainView: View {
                                 HStack{
                                     Text("Add discount code")
                                         .font(.subheadline)
-                                    
+                                        .font(.system(size: 18))
+                                
                                     Image(systemName: "chevron.forward")
                                 }
                             }
@@ -134,6 +142,9 @@ struct MainView: View {
                                 .cornerRadius(8)
                         }
                         .padding(.bottom, 250)
+//                        .onTapGesture {
+//                            modelContext.insert(Info(OrarioA: Date_Departure, OrarioB: Date_Arrival))
+//                        }
                     }
                 }
             }
@@ -144,24 +155,23 @@ struct MainView: View {
 
 
 struct StationModalView: View {
-    @Environment(\.modelContext) var ModelContext
+    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @Binding var isModalPresented:Bool
     @State private var focused:Bool = false
-    @State private var partenza:String = ""
-    @State private var arrivo:String = ""
+    @State var partenza:String = ""
+    @State var arrivo:String = ""
+    @Binding var isSaved:Bool
+    
+    
+    @Query var CorseTreni: [TrainData]
     var body: some View {
         VStack{
             HStack(spacing:250){
-                Button("Save") {
-                    ModelContext.insert(TrainData(Departure: partenza, Arrival: arrivo))
-                }
-                .fontWeight(.bold)
-                .font(.system(size: 20))
-                
-                
-                Button("Cancel") {
+                Button("Cancel"){
+                    modelContext.insert(TrainData(Departure: partenza, Arrival: arrivo))
                     self.isModalPresented.toggle()
+                    isSaved = true
                 }
                 .fontWeight(.bold)
                 .font(.system(size: 20))
@@ -297,6 +307,6 @@ struct StationModalView: View {
 
 
 #Preview {
-    MainView(partenza: .constant("Departure Station"), arrivo: .constant("Arrival Station"))
+    MainView(partenza:.constant("Departure Station"), arrivo: .constant("Arrival Station"))
 }
 

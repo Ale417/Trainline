@@ -31,13 +31,7 @@ struct ModalView: View {
     var body: some View {
         VStack{
             HStack(spacing:250){
-                Button("Save") {
-                    ModelContext.insert(TrainData(Departure: partenza, Arrival: arrivo))
-                }
-                .fontWeight(.bold)
-                .font(.system(size: 20))
-
-                
+            
                 Button("Cancel") {
                     self.isModalPresented.toggle()
                 }

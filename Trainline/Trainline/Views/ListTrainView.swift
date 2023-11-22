@@ -12,8 +12,15 @@ struct ListTrainView: View {
     
     let week = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
     
-//    @Query var CorseTreni: [TrainData]
-
+    @Query var CorseTreni: [TrainData]
+    @Query var InfoTreni: [Info]
+    
+    func formattedTime(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date)
+    }
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -25,11 +32,12 @@ struct ListTrainView: View {
                     
                     
                     VStack(alignment:.leading){
-                        HStack{
-////                            Text(CorseTreni[0].Departure)
-//                                .bold()
-//                            Image(systemName: "arrow.forward")
-////                            Text(CorseTreni[0].Arrival)
+                        HStack
+                        {
+                            Text(CorseTreni[0].Departure)
+                                .bold()
+                            Image(systemName: "arrow.forward")
+                            Text(CorseTreni[0].Arrival)
                         }
                         .padding(.leading)
                         .foregroundColor(.white)
@@ -63,7 +71,7 @@ struct ListTrainView: View {
                                 .foregroundColor(CustomColor.WhiteSmokes)
                             HStack(alignment:.top, spacing: 100){
                                 HStack{
-                                    Text("16:14")
+                                    Text(formattedTime(date:InfoTreni[0].OrarioA))
                                         .font(.title2)
                                         .bold()
                                     Image(systemName: "arrow.forward")
@@ -82,7 +90,7 @@ struct ListTrainView: View {
                 }
                 .padding(.top,-150)
             } .navigationTitle("Choose Outbound")
-                
+            
         }
     }
 }
