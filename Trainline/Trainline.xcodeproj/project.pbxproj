@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177D235C2B0E098600542BF9 /* Trains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D235B2B0E098600542BF9 /* Trains.swift */; };
+		177D235F2B0E0BBC00542BF9 /* TrainsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D235E2B0E0BBC00542BF9 /* TrainsViewModel.swift */; };
 		17D491112B0B76140087A9D4 /* DiscountCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D491102B0B76140087A9D4 /* DiscountCodeView.swift */; };
 		17D491132B0B9B150087A9D4 /* ModalExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D491122B0B9B150087A9D4 /* ModalExampleView.swift */; };
 		17F65E1D2B04BE6900E2FDDA /* TrainlineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F65E1C2B04BE6900E2FDDA /* TrainlineApp.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		177D235B2B0E098600542BF9 /* Trains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trains.swift; sourceTree = "<group>"; };
+		177D235E2B0E0BBC00542BF9 /* TrainsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainsViewModel.swift; sourceTree = "<group>"; };
 		17D491102B0B76140087A9D4 /* DiscountCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCodeView.swift; sourceTree = "<group>"; };
 		17D491122B0B9B150087A9D4 /* ModalExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalExampleView.swift; sourceTree = "<group>"; };
 		17F65E192B04BE6900E2FDDA /* Trainline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainline.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177D235D2B0E0ACE00542BF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				177D235B2B0E098600542BF9 /* Trains.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		17F65E102B04BE6900E2FDDA = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				17F65E1C2B04BE6900E2FDDA /* TrainlineApp.swift */,
+				177D235D2B0E0ACE00542BF9 /* Model */,
 				17F65E2E2B06181D00E2FDDA /* Views */,
 				17F65E202B04BE6900E2FDDA /* Assets.xcassets */,
 				17F65E222B04BE6900E2FDDA /* Preview Content */,
+				177D235E2B0E0BBC00542BF9 /* TrainsViewModel.swift */,
 			);
 			path = Trainline;
 			sourceTree = "<group>";
@@ -160,9 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177D235C2B0E098600542BF9 /* Trains.swift in Sources */,
 				17D491132B0B9B150087A9D4 /* ModalExampleView.swift in Sources */,
 				17D491112B0B76140087A9D4 /* DiscountCodeView.swift in Sources */,
 				17F65E1F2B04BE6900E2FDDA /* ContentView.swift in Sources */,
+				177D235F2B0E0BBC00542BF9 /* TrainsViewModel.swift in Sources */,
 				17F65E2D2B04E49100E2FDDA /* AddPassengerView.swift in Sources */,
 				17F65E302B0759F200E2FDDA /* ListTrainView.swift in Sources */,
 				17F65E1D2B04BE6900E2FDDA /* TrainlineApp.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddPassengerView: View {
     var body: some View {
-       Text("")
+       Text("Add passenger")
     }
 }
 

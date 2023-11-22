@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct TrainlineApp: App {
@@ -13,5 +14,6 @@ struct TrainlineApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: TrainData.self)
     }
 }

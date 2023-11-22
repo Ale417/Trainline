@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ListTrainView: View {
+    
     let week = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
     
+//    @Query var CorseTreni: [TrainData]
+
     var body: some View {
         NavigationStack{
             VStack{
@@ -22,10 +26,10 @@ struct ListTrainView: View {
                     
                     VStack(alignment:.leading){
                         HStack{
-                            Text("Patenza")
-                                .bold()
-                            Image(systemName: "arrow.forward")
-                            Text("Arrivo")
+////                            Text(CorseTreni[0].Departure)
+//                                .bold()
+//                            Image(systemName: "arrow.forward")
+////                            Text(CorseTreni[0].Arrival)
                         }
                         .padding(.leading)
                         .foregroundColor(.white)
@@ -34,14 +38,15 @@ struct ListTrainView: View {
                                 ForEach(week,id: \.self){day in
                                     ZStack{
                                         RoundedRectangle(cornerRadius: 5.0)
-                                            .stroke(.white, lineWidth: 5)
+                                            .foregroundColor(.white)
                                             .frame(width: 90.0, height:80.0)
                                         VStack{
                                             Text(day)
                                                 .bold()
                                             Text("4$")
+                                            Image(systemName: "magnifyingglass")
                                         }
-                                        .foregroundColor(CustomColor.WhiteSmokes)
+                                        .foregroundColor(CustomColor.DelftBlue)
                                     }
                                 }
                             }
@@ -54,20 +59,30 @@ struct ListTrainView: View {
                     ForEach(1..<11){ n in
                         ZStack{
                             Rectangle()
-                                .frame(width:500 , height:200)
+                                .frame(width:500 , height:150)
                                 .foregroundColor(CustomColor.WhiteSmokes)
-                            VStack{
+                            HStack(alignment:.top, spacing: 100){
                                 HStack{
-                                    Text("Orario Partenza")
+                                    Text("16:14")
+                                        .font(.title2)
+                                        .bold()
                                     Image(systemName: "arrow.forward")
-                                    Text("Orario Arrivo")
+                                        .foregroundColor(.gray)
+                                    Text("19:42")
+                                        .font(.title2)
+                                        .bold()
                                 }
+                                Text("€104.69")
+                                    .font(.title3)
+                                    .bold()
                             }
+                            
                         }
                     }
                 }
                 .padding(.top,-150)
             } .navigationTitle("Choose Outbound")
+                
         }
     }
 }
