@@ -196,7 +196,6 @@ struct StationModalView: View {
                         .frame(height: 50)
                         .foregroundColor(.black)
                         .font(.system(size: 20))
-                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                         
                 }
                 .background(Rectangle())
@@ -214,7 +213,6 @@ struct StationModalView: View {
                         .font(.system(size: 20))
                         .foregroundColor(colorScheme == . dark ? .black: .black)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 }
                 .background(Rectangle())
                 .cornerRadius(12)
