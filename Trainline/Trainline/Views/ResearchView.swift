@@ -61,6 +61,7 @@ struct MainView: View {
                                 }
                                 .padding(.leading, -180)
                                 .font(.system(size: 18))
+                                .accessibilityElement(children: .combine)
                             }
                             
                             ZStack{
@@ -81,6 +82,7 @@ struct MainView: View {
                                 }
                                 .padding(.leading, -170)
                                 .font(.system(size: 18))
+                                .accessibilityElement(children: .combine)
                             }
                         }
                     }
@@ -90,10 +92,13 @@ struct MainView: View {
                                 .bold()
                             .foregroundColor(CustomColor.Teal)})
                         .padding()
+                        .accessibilityElement(children: .combine)
+                            
                         Divider()
                         DatePicker(selection:$Date_Arrival, label: { Text("Return")
                                 .bold()
                             .foregroundColor(CustomColor.Teal)})
+                        .accessibilityElement(children: .combine)
                         .padding()
                         Divider()
                         NavigationLink(destination:{
@@ -108,6 +113,7 @@ struct MainView: View {
                                     Image(systemName: "chevron.forward")
                                 }
                             }
+                            .accessibilityHint(Text("Click to add a passenger"))
                             .foregroundColor(.black)
                             .padding()
                         })
@@ -182,7 +188,7 @@ struct StationModalView: View {
                         .foregroundColor(CustomColor.Teal)
                         .padding(.leading, 30.0)
                         .font(.system(size: 20))
-                    TextField("Stazione di Partenza", text: $partenza)
+                    TextField("Departure Station", text: $partenza)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .frame(height: 50)
                         .foregroundColor(.black)
@@ -197,7 +203,7 @@ struct StationModalView: View {
                         .font(.system(size: 20))
                         .foregroundColor(CustomColor.Teal)
                         .padding(.leading, 50.0)
-                    TextField("Stazione di Arrivo", text: $arrivo)
+                    TextField("Arrival Station", text: $arrivo)
                         .frame(height: 50)
                         .font(.system(size: 20))
                         .foregroundColor(.black)
@@ -219,6 +225,7 @@ struct StationModalView: View {
                     HStack{
                         HStack{
                             Image(systemName: "sparkles")
+                                .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             VStack(alignment:.leading){
                                 Text("Firenze Santa Maria Novella ")
                                 Text("Firenze ")
@@ -231,6 +238,7 @@ struct StationModalView: View {
                     HStack{
                         HStack{
                             Image(systemName: "sparkles")
+                                .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             VStack(alignment:.leading){
                                 Text("Pisa Centrale")
                                 Text("Pisa")
@@ -243,6 +251,7 @@ struct StationModalView: View {
                     HStack{
                         HStack{
                             Image(systemName: "sparkles")
+                                .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             VStack(alignment: .leading){
                                 Text("Milano Centrale")
                                 Text("Milano")
@@ -263,6 +272,7 @@ struct StationModalView: View {
                     HStack{
                         HStack{
                             Image(systemName: "timer")
+                                .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             VStack(alignment:.leading){
                                 Text("Napoli Centrale")
                                 Text("Napoli")
@@ -275,6 +285,7 @@ struct StationModalView: View {
                     HStack{
                         HStack{
                             Image(systemName: "timer")
+                                .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             VStack(alignment:.leading){
                                 Text("Santa Maria Capua Vetere")
                                 Text("SMCV")
@@ -287,6 +298,7 @@ struct StationModalView: View {
                     HStack{
                         HStack{
                             Image(systemName: "timer")
+                                .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             VStack(alignment:.leading){
                                 Text("Capua")
                                 Text("Capua")
