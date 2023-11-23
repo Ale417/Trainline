@@ -175,7 +175,7 @@ struct StationModalView: View {
     var body: some View {
         VStack{
             HStack(spacing:250){
-                Button("Save"){
+                Button("Done"){
                     modelContext.insert(TrainData(Departure: partenza, Arrival: arrivo))
                     self.isModalPresented.toggle()
                     isSaved = true
