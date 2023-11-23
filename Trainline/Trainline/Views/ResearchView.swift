@@ -162,6 +162,7 @@ struct MainView: View {
 
 struct StationModalView: View {
     @Environment(\.modelContext) var modelContext
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @Binding var isModalPresented:Bool
     @State private var focused:Bool = false
@@ -188,11 +189,15 @@ struct StationModalView: View {
                         .foregroundColor(CustomColor.Teal)
                         .padding(.leading, 30.0)
                         .font(.system(size: 20))
-                    TextField("Departure Station", text: $partenza)
+                        .accessibilityHint(Text("Click to add Departure Station"))
+                    TextField("", text: $partenza, prompt: Text("Departure Station")
+                        .foregroundStyle(.gray))
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .frame(height: 50)
                         .foregroundColor(.black)
                         .font(.system(size: 20))
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        
                 }
                 .background(Rectangle())
                 .cornerRadius(12)
@@ -203,11 +208,13 @@ struct StationModalView: View {
                         .font(.system(size: 20))
                         .foregroundColor(CustomColor.Teal)
                         .padding(.leading, 50.0)
-                    TextField("Arrival Station", text: $arrivo)
+                        .accessibilityHint(Text("Click to add Arrival Station"))
+                    TextField("", text:$arrivo, prompt: Text("Arrival Station").foregroundStyle(.gray))
                         .frame(height: 50)
                         .font(.system(size: 20))
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == . dark ? .black: .black)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 }
                 .background(Rectangle())
                 .cornerRadius(12)
